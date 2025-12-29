@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrackerCarsat - Segurança Inteligente</title>
+    <title>TrackerCarsat - Rastreamento Veicular</title>
+    
+    <link rel="icon" type="image/png" href="favicon.png"> 
+    <link rel="shortcut icon" href="icone.png" type="image/x-icon">
+
+    <meta property="og:title" content="TrackerCarsat - Segurança Inteligente">
+    <meta property="og:description" content="Rastreamento via satélite 24h, bloqueio remoto e gestão completa. Proteja seu veículo agora!">
+    <meta property="og:image" content="share-image.jpg"> <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="800"> <meta property="og:image:height" content="600">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -17,7 +28,7 @@
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#planos">Planos</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#cotacao" class="btn-nav">Cotação Online</a></li>
+                <li><a href="https://wa.me/5571981866650?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o%20online." target="_blank" class="btn-nav"><i class="fa-brands fa-whatsapp"></i> Cotação Online</a></li>
             </ul>
             <div class="menu-toggle" id="mobile-menu">
                 <i class="fa-solid fa-bars"></i>
@@ -121,7 +132,7 @@
                         <li><i class="fa-solid fa-check"></i> Bloqueio via Aplicativo</li>
                         <li class="disabled"><i class="fa-solid fa-xmark"></i> Assistência 24h</li>
                     </ul>
-                    <a href="#cotacao" class="btn-plan">Escolher Essencial</a>
+                    <a href="https://wa.me/5571981866650?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Plano%20ESSENCIAL%20de%20R%2449%2C90." target="_blank" class="btn-plan">Escolher Essencial</a>
                 </div>
                 
                 <div class="plan-card featured">
@@ -137,9 +148,9 @@
                         <li><i class="fa-solid fa-check"></i> Reboque 24h (400km)</li>
                         <li><i class="fa-solid fa-check"></i> Carga de Bateria</li>
                         <li><i class="fa-solid fa-check"></i> Troca de Pneus / Pane Seca</li>
-                        <li><i class="fa-solid fa-check"></i> Socorro Mecânico</li>
+                        <li><i class="fa-solid fa-check"></i> Assistencia</li>
                     </ul>
-                    <a href="#cotacao" class="btn-plan btn-featured">Quero o Smart + Assist</a>
+                    <a href="https://wa.me/5571981866650?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Plano%20SMART%20ASSIST%20de%20R%2479%2C90." target="_blank" class="btn-plan btn-featured">Quero o Smart + Assist</a>
                 </div>
 
                 <div class="plan-card">
@@ -153,10 +164,10 @@
                         <li><i class="fa-solid fa-check"></i> <strong>Tudo do Smart</strong></li>
                         <li><i class="fa-solid fa-check"></i> Equipe Tática de Apoio</li>
                         <li><i class="fa-solid fa-check"></i> Pronta Resposta Local</li>
-                        <li><i class="fa-solid fa-check"></i> Histórico de 90 dias</li>
-                        <li><i class="fa-solid fa-check"></i> Carro reserva (7 dias)</li>
+                        <li><i class="fa-solid fa-check"></i> Histórico de percuso</li>
+                        <li><i class="fa-solid fa-check"></i> </li>
                     </ul>
-                    <a href="#cotacao" class="btn-plan">Escolher Premium</a>
+                    <a href="https://wa.me/5571981866650?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Plano%20PREMIUM%20T%C3%81TICO%20de%20R%24119%2C90." target="_blank" class="btn-plan">Escolher Premium</a>
                 </div>
             </div>
         </div>
@@ -196,32 +207,31 @@
             <div class="form-box">
                 <div class="form-header ">
                     <h2>Proteja seu veículo hoje</h2>
-                    <p>Preencha o formulário abaixo. É rápido, fácil e sem compromisso.</p>
+                    <p>Preencha os dados abaixo e enviaremos a cotação diretamente no seu WhatsApp.</p>
                 </div>
-                <form class="quote-form">
+                
+                <form class="quote-form" id="whatsappForm">
                     <div class="input-wrapper">
                         <label><i class="fa-solid fa-user"></i> Nome Completo</label>
-                        <input type="text" placeholder="Ex: João da Silva" required>
+                        <input type="text" id="nome" placeholder="Ex: João da Silva" required>
                     </div>
                     <div class="input-wrapper">
-                        <label><i class="fa-solid fa-envelope"></i> E-mail Principal</label>
-                        <input type="email" placeholder="seu@email.com" required>
-                    </div>
-                    <div class="input-wrapper">
-                        <label><i class="fa-solid fa-phone"></i> WhatsApp / Telefone</label>
-                        <input type="tel" placeholder="(99) 99999-9999" required>
+                        <label><i class="fa-brands fa-whatsapp"></i> Seu WhatsApp</label>
+                        <input type="tel" id="telefone" placeholder="(71) 99999-9999" required>
                     </div>
                     <div class="input-wrapper">
                         <label><i class="fa-solid fa-car-side"></i> Tipo de Veículo</label>
-                        <select required>
+                        <select id="veiculo" required>
                             <option value="" disabled selected>Selecione o tipo...</option>
-                            <option value="carro">Carro de Passeio</option>
-                            <option value="moto">Motocicleta</option>
-                            <option value="caminhao">Caminhão/Frota</option>
-                            <option value="outro">Outro</option>
+                            <option value="Carro de Passeio">Carro de Passeio</option>
+                            <option value="Motocicleta">Motocicleta</option>
+                            <option value="Caminhão/Frota">Caminhão/Frota</option>
+                            <option value="Náutico">Náutico</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn-primary full-width">Solicitar Cotação Grátis <i class="fa-solid fa-arrow-right"></i></button>
+                    <button type="submit" class="btn-primary full-width">
+                        Receber Cotação no WhatsApp <i class="fa-brands fa-whatsapp"></i>
+                    </button>
                 </form>
             </div>
         </div>
@@ -243,12 +253,13 @@
             </div>
             <div class="footer-contact">
                 <h4>Contato</h4>
-                <p><i class="fa-solid fa-phone"></i> 71 9 84553633</p>
-                <p><i class="fa-solid fa-envelope"></i> contato@trackercarsat.com.br</p>
+                <p><a href="https://wa.me/5571981866650" target="_blank" style="color: inherit;"><i class="fa-brands fa-whatsapp"></i> (71) 98186-6650</a></p>
+                <p><a href="mailto:trackercarsat@gmail.com" style="color: inherit;"><i class="fa-solid fa-envelope"></i> trackercarsat@gmail.com</a></p>
+                
                 <div class="socials">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/trackercarsat/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/trackercarsatBA" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://wa.me/5571981866650" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
