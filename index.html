@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackerCarsat - Segurança Inteligente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">TRACKER<span>CARSAT</span></div>
+            <ul class="nav-links">
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#cotacao" class="btn-nav">Cotação Online</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="container hero-content">
+            <span class="hero-badge"><i class="fa-solid fa-shield-alt"></i> Tecnologia de Rastreamento 4G</span>
+            <h1>Sua tranquilidade tem <br>tecnologia de ponta.</h1>
+            <p>Rastreamento via satélite 24h, bloqueio remoto e gestão completa na palma da sua mão. Proteção total para você e sua família.</p>
+            <div class="hero-btns">
+                <a href="#cotacao" class="btn-primary play-pulse">Proteger meu veículo agora</a>
+                <a href="#servicos" class="btn-outline">Como funciona</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-strip">
+        <div class="container strip-container">
+            <div class="benefit-item">
+                <div class="icon-box"><i class="fa-solid fa-mobile-screen"></i></div>
+                <div class="text">
+                    <strong>Monitoramento</strong>
+                    <span>100% Online</span>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <div class="icon-box"><i class="fa-solid fa-lock"></i></div>
+                <div class="text">
+                    <strong>Bloqueio</strong>
+                    <span>Imediato via App</span>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <div class="icon-box"><i class="fa-solid fa-truck-pickup"></i></div>
+                <div class="text">
+                    <strong>Assistência</strong>
+                    <span>24 Horas</span>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <div class="icon-box"><i class="fa-solid fa-users-gears"></i></div>
+                <div class="text">
+                    <strong>Equipe Tática</strong>
+                    <span>Pronta Resposta</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="services">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Tecnologia a seu Favor</h2>
+                <p class="section-subtitle">Soluções avançadas para sua segurança e economia.</p>
+                <div class="title-bar center"></div>
+            </div>
+            <div class="grid-services">
+                <div class="card service-card">
+                    <div class="icon-wrapper"><i class="fa-solid fa-satellite-dish"></i></div>
+                    <h3>Rastreamento 24h</h3>
+                    <p>Localização exata do seu veículo em tempo real via App (Android/iOS) e Web com alta precisão.</p>
+                </div>
+                <div class="card service-card">
+                    <div class="icon-wrapper"><i class="fa-solid fa-fingerprint"></i></div>
+                    <h3>Bloqueio Remoto</h3>
+                    <p>Tecnologia anti-furto que permite desligar o motor do veículo com apenas um clique no celular.</p>
+                </div>
+                <div class="card service-card">
+                    <div class="icon-wrapper"><i class="fa-solid fa-route"></i></div>
+                    <h3>Gestão de Frotas</h3>
+                    <p>Controle de rotas, telemetria avançada, comportamento do motorista e redução de custos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="planos" class="plans">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Nossos Planos</h2>
+                <p class="section-subtitle">Escolha a proteção ideal para sua necessidade.</p>
+                <div class="title-bar center"></div>
+            </div>
+            <div class="grid-plans">
+                
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h4>Essencial</h4>
+                        <div class="price">
+                            <small>R$</small> 49,90 <small>/mês</small>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-check"></i> Monitoramento Online 24h</li>
+                        <li><i class="fa-solid fa-check"></i> Sistema Antifurto</li>
+                        <li><i class="fa-solid fa-check"></i> Cerca Virtual</li>
+                        <li><i class="fa-solid fa-check"></i> Bloqueio via Aplicativo</li>
+                        <li class="disabled"><i class="fa-solid fa-xmark"></i> Assistência 24h</li>
+                    </ul>
+                    <a href="#cotacao" class="btn-plan">Escolher Essencial</a>
+                </div>
+                
+                <div class="plan-card featured">
+                    <div class="badge">Mais Popular</div>
+                    <div class="plan-header">
+                        <h4>Smart + Assist</h4>
+                        <div class="price">
+                            <small>R$</small> 79,90 <small>/mês</small>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-check"></i> <strong>Tudo do Essencial</strong></li>
+                        <li><i class="fa-solid fa-check"></i> Reboque 24h (400km)</li>
+                        <li><i class="fa-solid fa-check"></i> Carga de Bateria</li>
+                        <li><i class="fa-solid fa-check"></i> Troca de Pneus / Pane Seca</li>
+                        <li><i class="fa-solid fa-check"></i> Socorro Mecânico</li>
+                    </ul>
+                    <a href="#cotacao" class="btn-plan btn-featured">Quero o Smart + Assist</a>
+                </div>
+
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h4>Premium Tático</h4>
+                        <div class="price">
+                            <small>R$</small> 119,90 <small>/mês</small>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-check"></i> <strong>Tudo do Smart</strong></li>
+                        <li><i class="fa-solid fa-check"></i> Equipe Tática de Apoio</li>
+                        <li><i class="fa-solid fa-check"></i> Pronta Resposta Local</li>
+                        <li><i class="fa-solid fa-check"></i> Histórico de 90 dias</li>
+                        <li><i class="fa-solid fa-check"></i> Carro reserva (7 dias)</li>
+                    </ul>
+                    <a href="#cotacao" class="btn-plan">Escolher Premium</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-text">
+                    <h2 class="section-title">Por que escolher a TrackerCarsat?</h2>
+                    <div class="title-bar"></div>
+                    <p>Mais do que rastreamento, entregamos inteligência logística e segurança patrimonial. Com tecnologia híbrida (4G + Satelital), garantimos que você nunca perca seu veículo de vista, mesmo em áreas de sombra.</p>
+                    <ul class="about-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Central de Monitoramento 24h própria.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Tecnologia homologada pela Anatel.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Índice de recuperação superior a 98%.</li>
+                    </ul>
+                </div>
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <h3>+10 Anos</h3>
+                        <p>de Experiência</p>
+                    </div>
+                    <div class="stat-card highlight">
+                        <i class="fa-solid fa-car-shield"></i>
+                        <h3>+5.000</h3>
+                        <p>Veículos Protegidos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cotacao" class="quote">
+        <div class="container">
+            <div class="form-box">
+                <div class="form-header ">
+                    <h2>Proteja seu veículo hoje</h2>
+                    <p>Preencha o formulário abaixo. É rápido, fácil e sem compromisso.</p>
+                </div>
+                <form class="quote-form">
+                    <div class="input-wrapper">
+                        <label><i class="fa-solid fa-user"></i> Nome Completo</label>
+                        <input type="text" placeholder="Ex: João da Silva" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <label><i class="fa-solid fa-envelope"></i> E-mail Principal</label>
+                        <input type="email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <label><i class="fa-solid fa-phone"></i> WhatsApp / Telefone</label>
+                        <input type="tel" placeholder="(99) 99999-9999" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <label><i class="fa-solid fa-car-side"></i> Tipo de Veículo</label>
+                        <select required>
+                            <option value="" disabled selected>Selecione o tipo...</option>
+                            <option value="carro">Carro de Passeio</option>
+                            <option value="moto">Motocicleta</option>
+                            <option value="caminhao">Caminhão/Frota</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary full-width">Solicitar Cotação Grátis <i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">TRACKER<span>CARSAT</span></div>
+                <p>Soluções avançadas em telemetria e segurança patrimonial para você e sua empresa.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="#cotacao">Cotação</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p><i class="fa-solid fa-phone"></i> 71 9 84553633</p>
+                <p><i class="fa-solid fa-envelope"></i> contato@trackercarsat.com.br</p>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 TrackerCarsat - Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
