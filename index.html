@@ -1,275 +1,856 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrackerCarsat - Rastreamento Veicular</title>
-    
-    <link rel="icon" type="image/png" href="favicon.png"> 
-    <link rel="shortcut icon" href="icone.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrackerCarsat - Rastreamento Veicular</title>
 
-    <meta property="og:title" content="TrackerCarsat - Segurança Inteligente">
-    <meta property="og:description" content="Rastreamento via satélite 24h, bloqueio remoto e gestão completa. Proteja seu veículo agora!">
-    <meta property="og:image" content="share-image.jpg"> <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="800"> <meta property="og:image:height" content="600">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="pt_BR">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="shortcut icon" href="icone.png" type="image/x-icon" />
+
+  <meta property="og:title" content="TrackerCarsat - Segurança Inteligente" />
+  <meta property="og:description" content="Rastreamento 24h, bloqueio remoto, cerca virtual e gestão completa. Proteja seu veículo agora!" />
+  <meta property="og:image" content="share-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="600" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+  <!-- Botão flutuante WhatsApp -->
+  <a class="wa-float" href="https://wa.me/5571981866650?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o%20online." target="_blank" aria-label="Falar no WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
-    <header>
-        <nav class="container">
-            <div class="logo">TRACKER<span>CARSAT</span></div>
-            <ul class="nav-links">
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#planos">Planos</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="https://wa.me/5571981866650?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o%20online." target="_blank" class="btn-nav"><i class="fa-brands fa-whatsapp"></i> Cotação Online</a></li>
-            </ul>
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </nav>
-    </header>
+  <!-- Botão voltar ao topo -->
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
-    <section class="hero">
-        <div class="overlay"></div>
-        <div class="container hero-content">
-            <span class="hero-badge"><i class="fa-solid fa-shield-alt"></i> Tecnologia de Rastreamento 4G</span>
-            <h1>Sua tranquilidade tem <br>tecnologia de ponta.</h1>
-            <p>Rastreamento via satélite 24h, bloqueio remoto e gestão completa na palma da sua mão. Proteção total para você e sua família.</p>
-            <div class="hero-btns">
-                <a href="#cotacao" class="btn-primary play-pulse">Proteger meu veículo agora</a>
-                <a href="#servicos" class="btn-outline">Como funciona</a>
-            </div>
+  <header>
+    <nav class="container">
+      <div class="logo">TRACKER<span>CARSAT</span></div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#planos">Planos</a></li>
+        <li><a href="#app">App</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li>
+          <a
+            href="https://wa.me/5571981866650?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o%20online."
+            target="_blank"
+            class="btn-nav"
+          >
+            <i class="fa-brands fa-whatsapp"></i> Cotação Online
+          </a>
+        </li>
+      </ul>
+
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="topo">
+    <div class="overlay"></div>
+    <div class="hero-grid container">
+      <div class="hero-content">
+        <span class="hero-badge">
+          <i class="fa-solid fa-shield-halved"></i>
+          Tecnologia de Rastreamento 4G
+        </span>
+
+        <h1>Sua tranquilidade tem <br />tecnologia de ponta.</h1>
+
+        <p>
+          Monitoramento 24h, bloqueio remoto, cerca virtual e relatórios inteligentes.
+          Proteja seu veículo (ou frota) com uma solução moderna, rápida e confiável.
+        </p>
+
+        <div class="hero-trust">
+          <div class="trust-chip"><i class="fa-solid fa-satellite-dish"></i> Tempo real</div>
+          <div class="trust-chip"><i class="fa-solid fa-bolt"></i> Alertas instantâneos</div>
+          <div class="trust-chip"><i class="fa-solid fa-user-shield"></i> Central 24h</div>
+          <div class="trust-chip"><i class="fa-solid fa-lock"></i> Anti-furto</div>
         </div>
-    </section>
 
-    <section class="benefits-strip">
-        <div class="container strip-container">
-            <div class="benefit-item">
-                <div class="icon-box"><i class="fa-solid fa-mobile-screen"></i></div>
-                <div class="text">
-                    <strong>Monitoramento</strong>
-                    <span>100% Online</span>
-                </div>
-            </div>
-            <div class="benefit-item">
-                <div class="icon-box"><i class="fa-solid fa-lock"></i></div>
-                <div class="text">
-                    <strong>Bloqueio</strong>
-                    <span>Imediato via App</span>
-                </div>
-            </div>
-            <div class="benefit-item">
-                <div class="icon-box"><i class="fa-solid fa-truck-pickup"></i></div>
-                <div class="text">
-                    <strong>Assistência</strong>
-                    <span>24 Horas</span>
-                </div>
-            </div>
-            <div class="benefit-item">
-                <div class="icon-box"><i class="fa-solid fa-users-gears"></i></div>
-                <div class="text">
-                    <strong>Equipe Tática</strong>
-                    <span>Pronta Resposta</span>
-                </div>
-            </div>
+        <div class="hero-btns">
+          <a href="#cotacao" class="btn-primary play-pulse" id="heroCta">Proteger meu veículo agora</a>
+          <a href="#como-funciona" class="btn-outline">Ver como funciona</a>
         </div>
-    </section>
 
-    <section id="servicos" class="services">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2 class="section-title">Tecnologia a seu Favor</h2>
-                <p class="section-subtitle">Soluções avançadas para sua segurança e economia.</p>
-                <div class="title-bar center"></div>
-            </div>
-            <div class="grid-services">
-                <div class="card service-card">
-                    <div class="icon-wrapper"><i class="fa-solid fa-satellite-dish"></i></div>
-                    <h3>Rastreamento 24h</h3>
-                    <p>Localização exata do seu veículo em tempo real via App (Android/iOS) e Web com alta precisão.</p>
-                </div>
-                <div class="card service-card">
-                    <div class="icon-wrapper"><i class="fa-solid fa-fingerprint"></i></div>
-                    <h3>Bloqueio Remoto</h3>
-                    <p>Tecnologia anti-furto que permite desligar o motor do veículo com apenas um clique no celular.</p>
-                </div>
-                <div class="card service-card">
-                    <div class="icon-wrapper"><i class="fa-solid fa-route"></i></div>
-                    <h3>Gestão de Frotas</h3>
-                    <p>Controle de rotas, telemetria avançada, comportamento do motorista e redução de custos.</p>
-                </div>
-            </div>
+        <div class="hero-note">
+          <i class="fa-solid fa-circle-check"></i>
+          Cotação rápida no WhatsApp (sem compromisso)
         </div>
-    </section>
+      </div>
 
-    <section id="planos" class="plans">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2 class="section-title">Nossos Planos</h2>
-                <p class="section-subtitle">Escolha a proteção ideal para sua necessidade.</p>
-                <div class="title-bar center"></div>
-            </div>
-            <div class="grid-plans">
-                
-                <div class="plan-card">
-                    <div class="plan-header">
-                        <h4>Essencial</h4>
-                        <div class="price">
-                            <small>R$</small> 49,90 <small>/mês</small>
-                        </div>
-                    </div>
-                    <ul class="plan-features">
-                        <li><i class="fa-solid fa-check"></i> Monitoramento Online 24h</li>
-                        <li><i class="fa-solid fa-check"></i> Sistema Antifurto</li>
-                        <li><i class="fa-solid fa-check"></i> Cerca Virtual</li>
-                        <li><i class="fa-solid fa-check"></i> Bloqueio via Aplicativo</li>
-                        <li class="disabled"><i class="fa-solid fa-xmark"></i> Assistência 24h</li>
-                    </ul>
-                    <a href="https://wa.me/5571981866650?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Plano%20ESSENCIAL%20de%20R%2449%2C90." target="_blank" class="btn-plan">Escolher Essencial</a>
-                </div>
-                
-                <div class="plan-card featured">
-                    <div class="badge">Mais Popular</div>
-                    <div class="plan-header">
-                        <h4>Smart + Assist</h4>
-                        <div class="price">
-                            <small>R$</small> 79,90 <small>/mês</small>
-                        </div>
-                    </div>
-                    <ul class="plan-features">
-                        <li><i class="fa-solid fa-check"></i> <strong>Tudo do Essencial</strong></li>
-                        <li><i class="fa-solid fa-check"></i> Reboque 24h (400km)</li>
-                        <li><i class="fa-solid fa-check"></i> Carga de Bateria</li>
-                        <li><i class="fa-solid fa-check"></i> Troca de Pneus / Pane Seca</li>
-                        <li><i class="fa-solid fa-check"></i> Assistencia</li>
-                    </ul>
-                    <a href="https://wa.me/5571981866650?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Plano%20SMART%20ASSIST%20de%20R%2479%2C90." target="_blank" class="btn-plan btn-featured">Quero o Smart + Assist</a>
-                </div>
-
-                <div class="plan-card">
-                    <div class="plan-header">
-                        <h4>Premium Tático</h4>
-                        <div class="price">
-                            <small>R$</small> 119,90 <small>/mês</small>
-                        </div>
-                    </div>
-                    <ul class="plan-features">
-                        <li><i class="fa-solid fa-check"></i> <strong>Tudo do Smart</strong></li>
-                        <li><i class="fa-solid fa-check"></i> Equipe Tática de Apoio</li>
-                        <li><i class="fa-solid fa-check"></i> Pronta Resposta Local</li>
-                        <li><i class="fa-solid fa-check"></i> Histórico de percuso</li>
-                        <li><i class="fa-solid fa-check"></i> </li>
-                    </ul>
-                    <a href="https://wa.me/5571981866650?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Plano%20PREMIUM%20T%C3%81TICO%20de%20R%24119%2C90." target="_blank" class="btn-plan">Escolher Premium</a>
-                </div>
-            </div>
+      <!-- Card tech no hero -->
+      <div class="hero-card tech-card reveal">
+        <div class="tech-card-top">
+          <div class="tech-dot"></div>
+          <div class="tech-dot"></div>
+          <div class="tech-dot"></div>
         </div>
-    </section>
 
-    <section id="sobre" class="about">
-        <div class="container">
-            <div class="about-wrapper">
-                <div class="about-text">
-                    <h2 class="section-title">Por que escolher a TrackerCarsat?</h2>
-                    <div class="title-bar"></div>
-                    <p>Mais do que rastreamento, entregamos inteligência logística e segurança patrimonial. Com tecnologia híbrida (4G + Satelital), garantimos que você nunca perca seu veículo de vista, mesmo em áreas de sombra.</p>
-                    <ul class="about-list">
-                        <li><i class="fa-solid fa-circle-check"></i> Central de Monitoramento 24h própria.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Tecnologia homologada pela Anatel.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Índice de recuperação superior a 98%.</li>
-                    </ul>
-                </div>
-                <div class="stats-container">
-                    <div class="stat-card">
-                        <i class="fa-solid fa-calendar-check"></i>
-                        <h3>+10 Anos</h3>
-                        <p>de Experiência</p>
-                    </div>
-                    <div class="stat-card highlight">
-                        <i class="fa-solid fa-car-shield"></i>
-                        <h3>+5.000</h3>
-                        <p>Veículos Protegidos</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <div class="tech-card-body">
+          <div class="tech-title">
+            <i class="fa-solid fa-wave-square"></i>
+            Painel Inteligente
+          </div>
 
-    <section id="cotacao" class="quote">
-        <div class="container">
-            <div class="form-box">
-                <div class="form-header ">
-                    <h2>Proteja seu veículo hoje</h2>
-                    <p>Preencha os dados abaixo e enviaremos a cotação diretamente no seu WhatsApp.</p>
-                </div>
-                
-                <form class="quote-form" id="whatsappForm">
-                    <div class="input-wrapper">
-                        <label><i class="fa-solid fa-user"></i> Nome Completo</label>
-                        <input type="text" id="nome" placeholder="Ex: João da Silva" required>
-                    </div>
-                    <div class="input-wrapper">
-                        <label><i class="fa-brands fa-whatsapp"></i> Seu WhatsApp</label>
-                        <input type="tel" id="telefone" placeholder="(71) 99999-9999" required>
-                    </div>
-                    <div class="input-wrapper">
-                        <label><i class="fa-solid fa-car-side"></i> Tipo de Veículo</label>
-                        <select id="veiculo" required>
-                            <option value="" disabled selected>Selecione o tipo...</option>
-                            <option value="Carro de Passeio">Carro de Passeio</option>
-                            <option value="Motocicleta">Motocicleta</option>
-                            <option value="Caminhão/Frota">Caminhão/Frota</option>
-                            <option value="Náutico">Náutico</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn-primary full-width">
-                        Receber Cotação no WhatsApp <i class="fa-brands fa-whatsapp"></i>
-                    </button>
-                </form>
+          <div class="tech-metrics">
+            <div class="metric">
+              <span class="label">Status</span>
+              <span class="value online"><i class="fa-solid fa-circle"></i> Online</span>
             </div>
-        </div>
-    </section>
+            <div class="metric">
+              <span class="label">Atualização</span>
+              <span class="value">A cada 3 minutos</span>
+            </div>
+            <div class="metric">
+              <span class="label">Alertas</span>
+              <span class="value">Ignição, cerca virtual, movimento</span>
+            </div>
+          </div>
 
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <div class="logo">TRACKER<span>CARSAT</span></div>
-                <p>Soluções avançadas em telemetria e segurança patrimonial para você e sua empresa.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Links Rápidos</h4>
-                <ul>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#planos">Planos</a></li>
-                    <li><a href="#cotacao">Cotação</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h4>Contato</h4>
-                <p><a href="https://wa.me/5571981866650" target="_blank" style="color: inherit;"><i class="fa-brands fa-whatsapp"></i> (71) 98186-6650</a></p>
-                <p><a href="mailto:trackercarsat@gmail.com" style="color: inherit;"><i class="fa-solid fa-envelope"></i> trackercarsat@gmail.com</a></p>
-                
-                <div class="socials">
-                    <a href="https://www.instagram.com/trackercarsat/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/trackercarsatBA" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://wa.me/5571981866650" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                </div>
-            </div>
+          <div class="tech-actions">
+            <a class="mini-btn" href="#app"><i class="fa-solid fa-mobile-screen"></i> Ver App</a>
+            <a class="mini-btn solid" href="#cotacao"><i class="fa-brands fa-whatsapp"></i> Cotar agora</a>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2025 TrackerCarsat - Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- BENEFITS STRIP -->
+  <section class="benefits-strip">
+    <div class="container strip-container">
+      <div class="benefit-item reveal">
+        <div class="icon-box"><i class="fa-solid fa-mobile-screen"></i></div>
+        <div class="text">
+          <strong>Monitoramento</strong>
+          <span>100% Online</span>
+        </div>
+      </div>
+      <div class="benefit-item reveal">
+        <div class="icon-box"><i class="fa-solid fa-lock"></i></div>
+        <div class="text">
+          <strong>Bloqueio</strong>
+          <span>Imediato via App</span>
+        </div>
+      </div>
+      <div class="benefit-item reveal">
+        <div class="icon-box"><i class="fa-solid fa-truck-pickup"></i></div>
+        <div class="text">
+          <strong>Assistência</strong>
+          <span>24 Horas</span>
+        </div>
+      </div>
+      <div class="benefit-item reveal">
+        <div class="icon-box"><i class="fa-solid fa-users-gears"></i></div>
+        <div class="text">
+          <strong>Equipe Tática</strong>
+          <span>Pronta Resposta</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="services">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Tecnologia a seu Favor</h2>
+        <p class="section-subtitle">Soluções avançadas para sua segurança e economia.</p>
+        <div class="title-bar center"></div>
+      </div>
+
+      <div class="grid-services">
+        <div class="card service-card reveal">
+          <div class="icon-wrapper"><i class="fa-solid fa-satellite-dish"></i></div>
+          <h3>Rastreamento 24h</h3>
+          <p>Localização em tempo real via App (Android/iOS) e Web, com histórico e relatórios.</p>
+        </div>
+
+        <div class="card service-card reveal">
+          <div class="icon-wrapper"><i class="fa-solid fa-fingerprint"></i></div>
+          <h3>Bloqueio Remoto</h3>
+          <p>Recurso anti-furto para imobilizar o veículo com segurança quando necessário.</p>
+        </div>
+
+        <div class="card service-card reveal">
+          <div class="icon-wrapper"><i class="fa-solid fa-route"></i></div>
+          <h3>Gestão de Frotas</h3>
+          <p>Controle de rotas, telemetria, eventos e economia com visão completa da operação.</p>
+        </div>
+
+        <div class="card service-card reveal">
+          <div class="icon-wrapper"><i class="fa-solid fa-draw-polygon"></i></div>
+          <h3>Cerca Virtual</h3>
+          <p>Crie zonas seguras e receba alertas quando o veículo entrar/sair da área.</p>
+        </div>
+
+        <div class="card service-card reveal">
+          <div class="icon-wrapper"><i class="fa-solid fa-bell"></i></div>
+          <h3>Alertas Inteligentes</h3>
+          <p>Ignição, movimento, velocidade e eventos críticos com notificação rápida.</p>
+        </div>
+
+        <div class="card service-card reveal">
+          <div class="icon-wrapper"><i class="fa-solid fa-shield-heart"></i></div>
+          <h3>Central 24h</h3>
+          <p>Suporte e monitoramento com protocolos de segurança e acionamento quando necessário.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-funciona" class="how">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Como funciona na prática</h2>
+        <p class="section-subtitle">Rápido, simples e sem complicação — do primeiro contato ao monitoramento.</p>
+        <div class="title-bar center"></div>
+      </div>
+
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Cotação e escolha do plano</h3>
+            <p>Você preenche o formulário e a cotação chega no WhatsApp. Sem burocracia.</p>
+          </div>
+        </div>
+
+        <div class="step reveal">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Instalação e ativação</h3>
+            <p>Equipe orienta instalação e ativa o seu acesso ao app e ao painel web.</p>
+          </div>
+        </div>
+
+        <div class="step reveal">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Monitoramento + alertas</h3>
+            <p>Você acompanha em tempo real, define cercas e recebe alertas inteligentes.</p>
+          </div>
+        </div>
+
+        <div class="step reveal">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h3>Suporte e assistência</h3>
+            <p>Dependendo do plano, você conta com assistência 24h e apoio tático.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="how-cta reveal">
+        <div class="how-cta-text">
+          <h3>Quer ver na prática?</h3>
+          <p>Solicite a cotação e receba atendimento direto no WhatsApp.</p>
+        </div>
+        <a class="btn-primary" href="#cotacao"><i class="fa-brands fa-whatsapp"></i> Receber cotação</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANOS -->
+  <section id="planos" class="plans">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Nossos Planos</h2>
+        <p class="section-subtitle">Escolha a proteção ideal para sua necessidade.</p>
+        <div class="title-bar center"></div>
+      </div>
+
+      <div class="grid-plans">
+        <div class="plan-card reveal">
+          <div class="plan-header">
+            <h4>Essencial</h4>
+            <div class="price">
+              <small>R$</small> 49,90 <small>/mês</small>
+            </div>
+          </div>
+
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> Monitoramento Online 24h</li>
+            <li><i class="fa-solid fa-check"></i> Sistema Antifurto</li>
+            <li><i class="fa-solid fa-check"></i> Cerca Virtual</li>
+            <li><i class="fa-solid fa-check"></i> Bloqueio via Aplicativo</li>
+            <li class="disabled"><i class="fa-solid fa-xmark"></i> Assistência 24h</li>
+          </ul>
+
+          <div class="plan-actions">
+            <a
+              href="https://wa.me/5571981866650?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Plano%20ESSENCIAL%20de%20R%2449%2C90."
+              target="_blank"
+              class="btn-plan"
+            >
+              Escolher Essencial
+            </a>
+
+            <button class="btn-plan ghost pick-plan" data-plan="Essencial (R$ 49,90/mês)">
+              Prefiro cotar por aqui
+            </button>
+          </div>
+        </div>
+
+        <div class="plan-card featured reveal">
+          <div class="badge">Mais Popular</div>
+
+          <div class="plan-header">
+            <h4>Smart + Assist</h4>
+            <div class="price">
+              <small>R$</small> 79,90 <small>/mês</small>
+            </div>
+          </div>
+
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> <strong>Tudo do Essencial</strong></li>
+            <li><i class="fa-solid fa-check"></i> Reboque 24h (até 400km)</li>
+            <li><i class="fa-solid fa-check"></i> Carga de Bateria</li>
+            <li><i class="fa-solid fa-check"></i> Troca de Pneus / Pane Seca</li>
+            <li><i class="fa-solid fa-check"></i> Assistência 24h</li>
+          </ul>
+
+          <div class="plan-actions">
+            <a
+              href="https://wa.me/5571981866650?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Plano%20SMART%20ASSIST%20de%20R%2479%2C90."
+              target="_blank"
+              class="btn-plan btn-featured"
+            >
+              Quero o Smart + Assist
+            </a>
+
+            <button class="btn-plan ghost pick-plan" data-plan="Smart + Assist (R$ 79,90/mês)">
+              Quero cotação com esse plano
+            </button>
+          </div>
+        </div>
+
+        <div class="plan-card reveal">
+          <div class="plan-header">
+            <h4>Premium Tático</h4>
+            <div class="price">
+              <small>R$</small> 119,90 <small>/mês</small>
+            </div>
+          </div>
+
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> <strong>Tudo do Smart</strong></li>
+            <li><i class="fa-solid fa-check"></i> Equipe Tática de Apoio</li>
+            <li><i class="fa-solid fa-check"></i> Pronta Resposta Local</li>
+            <li><i class="fa-solid fa-check"></i> Histórico de percurso</li>
+            <li><i class="fa-solid fa-check"></i> Prioridade no atendimento</li>
+          </ul>
+
+          <div class="plan-actions">
+            <a
+              href="https://wa.me/5571981866650?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Plano%20PREMIUM%20T%C3%81TICO%20de%20R%24119%2C90."
+              target="_blank"
+              class="btn-plan"
+            >
+              Escolher Premium
+            </a>
+
+            <button class="btn-plan ghost pick-plan" data-plan="Premium Tático (R$ 119,90/mês)">
+              Cotar Premium pelo formulário
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="plans-note reveal">
+        <i class="fa-solid fa-circle-info"></i>
+        Valores e benefícios podem variar por tipo de veículo e região. Confirme na cotação.
+      </div>
+    </div>
+  </section>
+
+  <!-- APP / RECURSOS -->
+  <section id="app" class="app">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">App e Painel Web</h2>
+        <p class="section-subtitle">Tudo o que você precisa na palma da mão — simples, rápido e moderno.</p>
+        <div class="title-bar center"></div>
+      </div>
+
+      <div class="app-grid">
+        <div class="app-features reveal">
+          <div class="feature">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Mapa em tempo real</strong>
+              <p>Atualizações rápidas com histórico de rotas e pontos.</p>
+            </div>
+          </div>
+
+          <div class="feature reveal">
+            <i class="fa-solid fa-shield"></i>
+            <div>
+              <strong>Modo segurança</strong>
+              <p>Alertas de ignição, movimento indevido e saída de área.</p>
+            </div>
+          </div>
+
+          <div class="feature reveal">
+            <i class="fa-solid fa-gauge-high"></i>
+            <div>
+              <strong>Relatórios e eventos</strong>
+              <p>Controle de velocidade, paradas, trajetos e estatísticas.</p>
+            </div>
+          </div>
+
+          <div class="feature reveal">
+            <i class="fa-solid fa-toggle-on"></i>
+            <div>
+              <strong>Comandos rápidos</strong>
+              <p>Atalhos para bloqueio, consulta e central (dependendo do plano).</p>
+            </div>
+          </div>
+
+          <div class="app-actions reveal">
+            <a href="#cotacao" class="btn-primary"><i class="fa-brands fa-whatsapp"></i> Quero no meu veículo</a>
+            <a href="#faq" class="btn-outline-dark"><i class="fa-solid fa-circle-question"></i> Tirar dúvidas</a>
+          </div>
+        </div>
+
+        <div class="phone-mock reveal" aria-label="Prévia do app">
+          <div class="phone-top">
+            <span class="pill"></span>
+          </div>
+          <div class="phone-screen">
+            <div class="phone-header">
+              <div class="ph-title">TrackerCarsat</div>
+              <div class="ph-badge"><i class="fa-solid fa-signal"></i> 4G</div>
+            </div>
+
+            <!-- NOVO MAPA - SUBSTITUÍDO AQUI -->
+            <div class="mini-map" aria-label="Mini mapa - Salvador BA">
+              <!-- HUD do mapa -->
+              <div class="map-hud">
+                <div class="hud-left">
+                  <span class="loc"><i class="fa-solid fa-location-dot"></i> Salvador - BA</span>
+                  <span class="time"><i class="fa-regular fa-clock"></i> Atualizado agora</span>
+                </div>
+
+                <span class="blocked-badge">
+                  <i class="fa-solid fa-lock"></i> BLOQUEADO
+                </span>
+              </div>
+
+              <!-- “Mapa” em SVG (estilizado) -->
+              <svg class="map-svg" viewBox="0 0 860 380" preserveAspectRatio="none" aria-hidden="true">
+                <!-- fundo -->
+                <defs>
+                  <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="rgba(255,255,255,0.10)"/>
+                    <stop offset="1" stop-color="rgba(255,255,255,0.03)"/>
+                  </linearGradient>
+
+                  <linearGradient id="seaGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="rgba(0,180,255,0.25)"/>
+                    <stop offset="1" stop-color="rgba(0,120,255,0.10)"/>
+                  </linearGradient>
+
+                  <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="6" result="blur"/>
+                    <feMerge>
+                      <feMergeNode in="blur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <rect x="0" y="0" width="860" height="380" fill="url(#bgGrad)"/>
+
+                <!-- “mar” (lado direito, pra lembrar litoral) -->
+                <path d="M640 0 C740 60, 780 160, 860 220 L860 380 L640 380 C620 320, 610 240, 640 0 Z"
+                      fill="url(#seaGrad)" opacity="0.9"/>
+
+                <!-- “ilhas/manchas” -->
+                <circle cx="735" cy="95" r="26" fill="rgba(255,204,0,0.14)"/>
+                <circle cx="780" cy="135" r="16" fill="rgba(255,204,0,0.10)"/>
+
+                <!-- “avenidas/ruas” -->
+                <path d="M40 310 C190 250, 260 220, 380 190 C500 160, 560 150, 660 140"
+                      stroke="rgba(255,255,255,0.22)" stroke-width="8" fill="none" stroke-linecap="round"/>
+                <path d="M90 70 C210 120, 290 160, 420 220 C520 265, 610 285, 720 300"
+                      stroke="rgba(255,255,255,0.18)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                <path d="M210 340 C270 290, 330 250, 420 210 C520 165, 590 150, 650 132"
+                      stroke="rgba(255,204,0,0.18)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.8"/>
+
+                <!-- “quadras” -->
+                <g opacity="0.25">
+                  <rect x="80" y="105" width="120" height="70" rx="12" fill="rgba(255,255,255,0.08)"/>
+                  <rect x="230" y="135" width="140" height="78" rx="12" fill="rgba(255,255,255,0.06)"/>
+                  <rect x="410" y="95" width="150" height="86" rx="12" fill="rgba(255,255,255,0.06)"/>
+                  <rect x="450" y="220" width="160" height="88" rx="12" fill="rgba(255,255,255,0.05)"/>
+                </g>
+
+                <!-- Área "cerca virtual" -->
+                <path d="M360 120 L590 120 L650 210 L520 320 L330 290 Z"
+                      fill="rgba(255,204,0,0.06)"
+                      stroke="rgba(255,204,0,0.25)"
+                      stroke-width="3"
+                      stroke-dasharray="10 10"/>
+
+                <!-- Ponto Salvador (marker) -->
+                <g class="marker" transform="translate(520,210)" filter="url(#softGlow)">
+                  <circle cx="0" cy="0" r="18" fill="rgba(255,204,0,0.22)"/>
+                  <circle cx="0" cy="0" r="8" fill="rgba(255,204,0,0.95)"/>
+                </g>
+              </svg>
+
+              <!-- Veículo + label -->
+              <div class="car-marker" title="Veículo bloqueado">
+                <div class="car-dot"></div>
+                <div class="car-icon">
+                  <i class="fa-solid fa-car-side"></i>
+                </div>
+                <div class="car-label">
+                  <strong>HB20</strong>
+                  <span>Imobilizado</span>
+                </div>
+              </div>
+
+              <!-- Controles fake do mapa -->
+              <div class="map-controls" aria-hidden="true">
+                <button type="button" class="map-btn"><i class="fa-solid fa-plus"></i></button>
+                <button type="button" class="map-btn"><i class="fa-solid fa-minus"></i></button>
+                <button type="button" class="map-btn"><i class="fa-solid fa-layer-group"></i></button>
+              </div>
+            </div>
+            <!-- FIM DO NOVO MAPA -->
+
+            <div class="phone-cards">
+              <div class="mini-card">
+                <span class="k">Status</span>
+                <span class="v ok">Online</span>
+              </div>
+              <div class="mini-card">
+                <span class="k">Cerca</span>
+                <span class="v">Ativa</span>
+              </div>
+              <div class="mini-card">
+                <span class="k">Alerta</span>
+                <span class="v">Nenhum</span>
+              </div>
+            </div>
+
+            <div class="phone-footer">
+              <div class="nav-ico active"><i class="fa-solid fa-map"></i></div>
+              <div class="nav-ico"><i class="fa-solid fa-bell"></i></div>
+              <div class="nav-ico"><i class="fa-solid fa-chart-line"></i></div>
+              <div class="nav-ico"><i class="fa-solid fa-gear"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="testimonials" id="depoimentos">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Quem usa, recomenda</h2>
+        <p class="section-subtitle">Confiabilidade e suporte de verdade no dia a dia.</p>
+        <div class="title-bar center"></div>
+      </div>
+
+      <div class="test-grid">
+        <div class="test-card reveal">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>“Rastreamento muito rápido e o suporte resolveu uma dúvida na hora. Recomendo!”</p>
+          <div class="who">
+            <div class="avatar">JR</div>
+            <div>
+              <strong>João R.</strong>
+              <span>Carro de passeio</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="test-card reveal">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>“Coloquei na moto e fiquei bem mais tranquilo. Alertas e cerca virtual ajudam muito.”</p>
+          <div class="who">
+            <div class="avatar">MS</div>
+            <div>
+              <strong>Matheus S.</strong>
+              <span>Motocicleta</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="test-card reveal">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>“Para frota foi essencial: histórico e controle de rotas melhorou nossa operação.”</p>
+          <div class="who">
+            <div class="avatar">FL</div>
+            <div>
+              <strong>Fernanda L.</strong>
+              <span>Frotas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-strip reveal">
+        <div>
+          <h3>Pronto pra proteger o seu veículo?</h3>
+          <p>Receba uma proposta personalizada no WhatsApp em poucos minutos.</p>
+        </div>
+        <a href="#cotacao" class="btn-primary"><i class="fa-brands fa-whatsapp"></i> Quero a cotação</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="about">
+    <div class="container">
+      <div class="about-wrapper">
+        <div class="about-text reveal">
+          <h2 class="section-title">Por que escolher a TrackerCarsat?</h2>
+          <div class="title-bar"></div>
+
+          <p>
+            Mais do que rastreamento, entregamos inteligência logística e segurança patrimonial.
+            Com tecnologia híbrida (4G + Satelital), você acompanha tudo mesmo em áreas de sombra.
+          </p>
+
+          <ul class="about-list">
+            <li><i class="fa-solid fa-circle-check"></i> Central de Monitoramento 24h própria.</li>
+            <li><i class="fa-solid fa-circle-check"></i> Tecnologia homologada pela Anatel.</li>
+            <li><i class="fa-solid fa-circle-check"></i> Índice de recuperação superior a 98%.</li>
+            <li><i class="fa-solid fa-circle-check"></i> Relatórios e alertas inteligentes em tempo real.</li>
+          </ul>
+        </div>
+
+        <div class="stats-container">
+          <div class="stat-card reveal">
+            <i class="fa-solid fa-calendar-check"></i>
+            <h3>+10 Anos</h3>
+            <p>de Experiência</p>
+          </div>
+
+          <div class="stat-card highlight reveal">
+            <i class="fa-solid fa-car-shield"></i>
+            <h3>+5.000</h3>
+            <p>Veículos Protegidos</p>
+          </div>
+
+          <div class="stat-card reveal">
+            <i class="fa-solid fa-headset"></i>
+            <h3>24h</h3>
+            <p>Central & Suporte</p>
+          </div>
+
+          <div class="stat-card reveal">
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Alertas</h3>
+            <p>em tempo real</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Dúvidas frequentes</h2>
+        <p class="section-subtitle">Respostas rápidas para as perguntas mais comuns.</p>
+        <div class="title-bar center"></div>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button">
+            <span>O rastreamento funciona em qualquer lugar?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-a">
+            Sim. O sistema usa tecnologia 4G e pode ter suporte satelital em cenários específicos (dependendo do dispositivo/plano),
+            ajudando inclusive em áreas com sinal mais fraco.
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button">
+            <span>Consigo ver a rota e histórico?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-a">
+            Sim. Você acompanha em tempo real e pode acessar histórico de percurso, eventos e relatórios pelo app/painel web.
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button">
+            <span>O bloqueio remoto é seguro?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-a">
+            O bloqueio deve ser usado com critério e conforme orientação. Em situações de risco, a central pode orientar o melhor procedimento.
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button">
+            <span>Quanto tempo para instalar e ativar?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-a">
+            Normalmente é rápido: após a confirmação, a instalação e ativação podem ocorrer no mesmo dia, dependendo da agenda/local.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-cta reveal">
+        <div>
+          <h3>Ainda ficou alguma dúvida?</h3>
+          <p>Fale com a gente no WhatsApp e resolva em minutos.</p>
+        </div>
+        <a class="btn-primary" href="https://wa.me/5571981866650?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20o%20rastreamento." target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> Tirar dúvida
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COTAÇÃO -->
+  <section id="cotacao" class="quote">
+    <div class="container">
+      <div class="form-box reveal">
+        <div class="form-header">
+          <h2>Proteja seu veículo hoje</h2>
+          <p>Preencha abaixo e enviaremos a cotação diretamente no seu WhatsApp.</p>
+        </div>
+
+        <form class="quote-form" id="whatsappForm">
+          <div class="input-wrapper">
+            <label for="nome"><i class="fa-solid fa-user"></i> Nome Completo</label>
+            <input type="text" id="nome" placeholder="Ex: João da Silva" required />
+          </div>
+
+          <div class="input-wrapper">
+            <label for="telefone"><i class="fa-brands fa-whatsapp"></i> Seu WhatsApp</label>
+            <input type="tel" id="telefone" placeholder="(71) 99999-9999" required />
+          </div>
+
+          <div class="input-wrapper">
+            <label for="veiculo"><i class="fa-solid fa-car-side"></i> Tipo de Veículo</label>
+            <select id="veiculo" required>
+              <option value="" disabled selected>Selecione o tipo...</option>
+              <option value="Carro de Passeio">Carro de Passeio</option>
+              <option value="Motocicleta">Motocicleta</option>
+              <option value="Caminhão/Frota">Caminhão/Frota</option>
+              <option value="Náutico">Náutico</option>
+            </select>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="plano"><i class="fa-solid fa-layer-group"></i> Plano (opcional)</label>
+            <select id="plano">
+              <option value="" selected>Quero recomendação</option>
+              <option value="Essencial (R$ 49,90/mês)">Essencial (R$ 49,90/mês)</option>
+              <option value="Smart + Assist (R$ 79,90/mês)">Smart + Assist (R$ 79,90/mês)</option>
+              <option value="Premium Tático (R$ 119,90/mês)">Premium Tático (R$ 119,90/mês)</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-primary full-width">
+            Receber Cotação no WhatsApp <i class="fa-brands fa-whatsapp"></i>
+          </button>
+
+          <div class="form-disclaimer">
+            <i class="fa-solid fa-lock"></i>
+            Seus dados são usados somente para atendimento e cotação.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="logo">TRACKER<span>CARSAT</span></div>
+        <p>Soluções avançadas em telemetria e segurança patrimonial para você e sua empresa.</p>
+
+        <div class="footer-badges">
+          <div class="badge-chip"><i class="fa-solid fa-shield"></i> Segurança</div>
+          <div class="badge-chip"><i class="fa-solid fa-signal"></i> Conectividade</div>
+          <div class="badge-chip"><i class="fa-solid fa-headset"></i> Suporte</div>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Links Rápidos</h4>
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#cotacao">Cotação</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contato</h4>
+        <p>
+          <a href="https://wa.me/5571981866650" target="_blank" style="color: inherit;">
+            <i class="fa-brands fa-whatsapp"></i> (71) 98186-6650
+          </a>
+        </p>
+        <p>
+          <a href="mailto:trackercarsat@gmail.com" style="color: inherit;">
+            <i class="fa-solid fa-envelope"></i> trackercarsat@gmail.com
+          </a>
+        </p>
+
+        <div class="socials">
+          <a href="https://www.instagram.com/trackercarsat/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/trackercarsatBA" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://wa.me/5571981866650" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 TrackerCarsat - Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
