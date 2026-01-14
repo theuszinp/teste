@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const plano = document.getElementById('plano')?.value || '';
 
       // Número de destino (TrackerCarsat)
-      const numeroDestino = '5571981866650';
+      const numeroDestino = '5571984553633';
 
       const linhas = [];
       linhas.push(`Olá! Me chamo *${nome}*.`);
